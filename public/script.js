@@ -112,7 +112,7 @@ loginButton.addEventListener('click', () => {
         // Success, store the token in local storage and redirect to "search" page
         response.json().then(data => {
             localStorage.setItem("Token", data.token);
-            location.replace("search");
+            location.replace("search.html");
         });
     } else {
         // Handle other response codes here
