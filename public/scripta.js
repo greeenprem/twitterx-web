@@ -12,7 +12,7 @@ function checkTokenValidity() {
       return;
     }
   
-    fetch('http://localhost:3000/user', {
+    fetch('/user', {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${token}`
