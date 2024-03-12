@@ -9,7 +9,7 @@ otpbtn.addEventListener('click', () => {
 
 
     // Create an object with the user's data
-    fetch(`http://localhost:3000/send-otp?mail=${mail}`)
+    fetch(`/send-otp?mail=${mail}`)
   .then(response => response.json())
   .then(data => {
     if (data.message === 'User not found' && !document.getElementsByClassName("tex")[1]) {
@@ -61,7 +61,7 @@ function changepwd(){
         "password":passwd,
         "otp":otp
     }
-    fetch('http://localhost:3000/set-password', {
+    fetch('/set-password', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'
