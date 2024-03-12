@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Store the JSON response in localStorage
                 localStorage.setItem("graph_data", JSON.stringify(data["data"]));
                 localStorage.setItem("tweets", JSON.stringify(data["tweets"]));
-                location.replace("dashboard")
+                location.replace("dashboard.html")
                 // Update the message
                
             })
