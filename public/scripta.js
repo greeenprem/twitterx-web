@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 2000);
 
         // Send the GET request
-        fetch(`http://127.0.0.1:5000/sentiment?q=${query}`,{headers:{'Authorization': `Bearer ${localStorage.getItem('Token')}`}})
+        fetch(`https://greenprem.pythonanywhere.com/sentiment?q=${query}`,{headers:{'Authorization': `Bearer ${localStorage.getItem('Token')}`}})
             .then(response => response.json())
             .then(data => {
                 // Store the JSON response in localStorage
