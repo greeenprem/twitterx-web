@@ -9,7 +9,7 @@ function checkTokenValidity() {
       return;
     }
   
-    fetch('http://localhost:3000/user', {
+    fetch('/user', {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${token}`
@@ -70,7 +70,7 @@ signupButton.addEventListener('click', () => {
     const jsonString = JSON.stringify(userObject);
 
     // Store the JSON string in local storage using the username as the key
-    fetch('http://localhost:3000/signup', {
+    fetch('/signup', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
@@ -96,7 +96,7 @@ loginButton.addEventListener('click', () => {
 
     // Retrieve user data from local storage
    const userob = {"usernameOrEmail":username,"password":password}
-   fetch('http://localhost:3000/login', {
+   fetch('/login', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
